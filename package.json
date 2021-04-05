@@ -1,0 +1,17 @@
+{
+  "name": "back-to-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startClient": "cd front-react && npm start ",
+    "start": "concurrently \"cd backend && npm run dev\" \"npm run startClient\"",
+    "first-install": " npm i && cd backend && npm i && cd .. && cd front-react && npm i"
+  },
+  "author": "Ariel",
+  "license": "ISC"
+}

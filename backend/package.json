@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server"
+  },
+  "repository": {},
+  "author": "",
+  "license": "ISC",
+  "bugs": {},
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "joi": "^17.4.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
