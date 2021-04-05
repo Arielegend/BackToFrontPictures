@@ -1,5 +1,10 @@
 const axios = require("axios").default;
 
+/*
+Simple get method.
+In case GET call is successful, return data and status 1
+Otherwise, wee return status 0 and empty array
+*/
 const GetByUrl = async (url) => {
   let response = await axios.get(url);
   if (response.status == 200) {
@@ -17,10 +22,4 @@ const GetByUrl = async (url) => {
   return response_to_client;
 };
 
-/*
-since photos url brings back {}
-*/
-function MakeFinalResponse() {
-  return [];
-}
 module.exports = GetByUrl;

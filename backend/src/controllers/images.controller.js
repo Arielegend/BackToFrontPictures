@@ -34,15 +34,15 @@ function MakeFinalResponse(response_images, response_photos) {
 
 /*
 This function create 2 calls, fetching 2 url.
-From business aspects, I have made that if 1 of the urls aint responding, 
+From business aspects, I have made that if 1 of the urls aint responding,
 No picture will be shown.
 
-Of course, we could do it differentaly (like showing all picture that have arrived, regardeles others API calls)
+Of course, we could do it differently (like showing all picture that have arrived, regardless others API calls)
 */
 const getImages = catchAsync(async (req, res) => {
   GetByUrl(images_url).then((response_images) => {
     GetByUrl(photos_url).then((response_photos) => {
-      // Here we check both calls are successfull
+      // Here we check both calls are successful
       // We could also do it per response,
       // Depends what your boss is asking for ><
       if (response_images.status == 1 && response_photos.status == 1) {
